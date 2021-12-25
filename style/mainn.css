@@ -165,16 +165,17 @@ body {
   width: 100%;
   background-size: 80%;
   background-image: url(../images/desktop/image-header.jpg);
-  min-height: 600px;
+  min-height: 500px;
   background-position-y: bottom;
   background-position-x: center;
   background-repeat: no-repeat;
 }
 
 .header .head-img img {
+  height: 200px;
   position: absolute;
   left: 50%;
-  top: calc(50% - 0px);
+  top: calc(50% - 75px);
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
 }
@@ -653,7 +654,8 @@ body {
     background-size: cover;
   }
   .header .head-img img {
-    top: 35%;
+    top: 30%;
+    height: 170px;
   }
   .section1 {
     display: -webkit-box;
