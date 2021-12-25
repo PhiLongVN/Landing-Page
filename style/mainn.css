@@ -112,6 +112,10 @@ body {
   width: 100%;
 }
 
+.toggle .hamber {
+  display: none;
+}
+
 .toggle .menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -127,7 +131,7 @@ body {
 
 .toggle .menu a {
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #f3ffff;
   padding: 1rem 1.5rem;
   background: transparent;
@@ -149,6 +153,7 @@ body {
 }
 
 .header h1 {
+  padding: 1rem 2rem;
   font-size: 6rem;
   color: #f3ffff;
   text-align: center;
@@ -158,10 +163,10 @@ body {
 .header .head-img {
   position: relative;
   width: 100%;
-  background-size: contain;
+  background-size: 80%;
   background-image: url(../images/desktop/image-header.jpg);
-  min-height: 500px;
-  background-position-y: center;
+  min-height: 600px;
+  background-position-y: bottom;
   background-position-x: center;
   background-repeat: no-repeat;
 }
@@ -202,7 +207,7 @@ body {
 }
 
 .section1 .sec1-text p {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: #b2b0b9;
   line-height: 1.5;
   margin: 2rem 0;
@@ -285,7 +290,7 @@ body {
 }
 
 .section2 .sec2-text p {
-  font-size: 1.4rem;
+  font-size: 1.8rem;
   color: #b2b0b9;
   line-height: 1.5;
   margin: 2rem 0;
@@ -332,7 +337,7 @@ body {
 
 .section3 .sec3-cherry {
   width: 50%;
-  min-height: 400px;
+  min-height: 500px;
   position: relative;
   background-image: url(../images/desktop/image-graphic-design.jpg);
   background-repeat: no-repeat;
@@ -342,7 +347,7 @@ body {
 
 .section3 .sec3-orange {
   width: 50%;
-  min-height: 400px;
+  min-height: 500px;
   position: relative;
   background-image: url(../images/desktop/image-photography.jpg);
   background-repeat: no-repeat;
@@ -369,7 +374,7 @@ body {
 }
 
 .sec3-cherry .sec3-text p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #25574d;
 }
 
@@ -392,7 +397,7 @@ body {
 }
 
 .sec3-orange .sec3-text p {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   color: #25574d;
 }
 
@@ -447,8 +452,8 @@ body {
 }
 
 .sec4-info .info img {
-  width: 50px;
-  height: 50px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   margin: 4.5rem 0;
 }
@@ -478,34 +483,34 @@ body {
 
 .section5 .sec5 {
   width: 100%;
-  min-height: 300px;
+  min-height: 400px;
 }
 
 .section5 .sec5-img1 {
   background-image: url(../images/desktop/image-gallery-milkbottles.jpg);
   background-position: bottom center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .section5 .sec5-img2 {
   background-image: url(../images/desktop/image-gallery-orange.jpg);
   background-position: bottom center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .section5 .sec5-img3 {
   background-image: url(../images/desktop/image-gallery-cone.jpg);
   background-position: bottom center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 .section5 .sec5-img4 {
   background-image: url(../images/desktop/image-gallery-sugarcubes.jpg);
   background-position: bottom center;
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
@@ -526,6 +531,11 @@ body {
           flex-direction: column;
   background: #90d4c5;
   padding: 6rem 0;
+}
+
+.footer .eee {
+  -webkit-filter: brightness(30%);
+          filter: brightness(30%);
 }
 
 .footer .foot-menu {
@@ -563,6 +573,212 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  gap: 2rem;
+  gap: 3rem;
+}
+
+.footer .foot-icon a img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer .foot-icon a img:hover {
+  -webkit-filter: brightness(0%) invert(100%);
+          filter: brightness(0%) invert(100%);
+}
+
+@media screen and (max-width: 768px) {
+  .toggle .hamber {
+    display: block;
+    cursor: pointer;
+    z-index: 15;
+  }
+  .toggle .hamber:hover {
+    -webkit-filter: contrast(50%);
+            filter: contrast(50%);
+  }
+  .toggle .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: white;
+    padding: 4rem 12rem;
+    position: absolute;
+    top: 100px;
+    right: 20px;
+    -webkit-transform: translateY(-50px);
+            transform: translateY(-50px);
+    z-index: 10;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
+  }
+  .toggle .menu.active {
+    visibility: visible;
+    opacity: 1;
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  .toggle .menu::before {
+    content: "";
+    position: absolute;
+    border: 30px solid blue;
+    border-color: transparent white transparent transparent;
+    width: 0px;
+    height: 0px;
+    right: 0%;
+    bottom: 90.5%;
+    z-index: 8;
+  }
+  .toggle .menu a {
+    color: black;
+    opacity: 0.5;
+  }
+  .header h1 {
+    font-size: 4rem;
+  }
+  .header .head-img {
+    background-image: url(../images/mobile/image-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .header .head-img img {
+    top: 35%;
+  }
+  .section1 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  .section1 .sec1-img {
+    width: 100%;
+  }
+  .section1 .sec1-text {
+    width: 100%;
+    max-width: 55ch;
+    padding: 4rem;
+    text-align: center;
+  }
+  .section2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section2 .sec2-text {
+    width: 100%;
+    max-width: 60ch;
+    text-align: center;
+  }
+  .section2 .sec2-img {
+    width: 100%;
+  }
+  .section3 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .section3 .sec3-cherry {
+    width: 100%;
+  }
+  .section3 .sec3-orange {
+    width: 100%;
+  }
+  .section4 h2 {
+    font-size: 4rem;
+    font-weight: 400;
+    opacity: 0.8;
+    text-align: center;
+  }
+  .section4 .sec4-info {
+    -ms-grid-columns: unset;
+        grid-template-columns: unset;
+    -ms-grid-rows: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+  }
+  .section4 .sec4-info img {
+    width: 70px;
+    height: 70px;
+    margin: 2rem;
+    margin-top: 6rem;
+  }
+  .section4 .sec4-info p {
+    font-size: 1.8rem;
+    max-width: 35ch;
+  }
+  .section5 {
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    background: #90d4c5;
+  }
+  .section5 .sec5 {
+    min-width: 100%;
+    min-height: 300px;
+  }
+  .section5 .sec5-img1 {
+    background-image: url(../images/mobile/image-gallery-cone.jpg);
+    background-size: contain;
+    background-position: bottom right;
+  }
+  .section5 .sec5-img2 {
+    background-image: url(../images/mobile/image-gallery-orange.jpg);
+    background-size: contain;
+    background-position: bottom left;
+  }
+  .section5 .sec5-img3 {
+    background-image: url(../images/mobile/image-gallery-milkbottles.jpg);
+    background-size: contain;
+    background-position: top right;
+  }
+  .section5 .sec5-img4 {
+    background-image: url(../images/mobile/image-gallery-sugar-cubes.jpg);
+    background-size: contain;
+    background-position: top left;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .toggle .menu {
+    padding: 3rem 8rem;
+  }
 }
 /*# sourceMappingURL=mainn.css.map */

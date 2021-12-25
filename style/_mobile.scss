@@ -1,0 +1,201 @@
+@media screen and (max-width: 768px) {
+  // TOOGLE==================================================================
+  .toggle {
+    .hamber {
+      display: block;
+      cursor: pointer;
+      z-index: 15;
+
+      &:hover {
+        filter: contrast(50%);
+      }
+    }
+
+    .menu {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+
+      background-color: white;
+      padding: 4rem 12rem;
+      position: absolute;
+      top: 100px;
+      right: 20px;
+      transform: translateY(-50px);
+      z-index: 10;
+      visibility: hidden;
+      opacity: 0;
+      transition: all 0.5s ease;
+
+      &.active {
+        visibility: visible;
+        opacity: 1;
+        transform: translateY(0px);
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        border: 30px solid blue;
+        border-color: transparent white transparent transparent;
+        width: 0px;
+        height: 0px;
+        right: 0%;
+        bottom: 90.5%;
+        z-index: 8;
+      }
+
+      a {
+        color: black;
+        opacity: 0.5;
+      }
+    }
+  }
+
+  // header==========================================================
+  .header {
+    h1 {
+      font-size: 4rem;
+    }
+
+    .head-img {
+      background-image: url(../images/mobile/image-header.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      img {
+        top: 35%;
+      }
+    }
+  }
+
+  // SECTION1=====================================================================================================
+  .section1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column-reverse;
+
+    // A.secc1-img
+    .sec1-img {
+      width: 100%;
+    }
+
+    // B.text
+    .sec1-text {
+      width: 100%;
+      max-width: 55ch;
+      padding: 4rem;
+      text-align: center;
+    }
+  }
+
+  // SEC2=========================================================
+  .section2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    //text
+    .sec2-text {
+      width: 100%;
+      max-width: 60ch;
+      text-align: center;
+    }
+
+    // img
+    .sec2-img {
+      width: 100%;
+    }
+  }
+  // SECC3================================================================
+
+  .section3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .sec3-cherry {
+      width: 100%;
+    }
+
+    .sec3-orange {
+      width: 100%;
+    }
+  }
+
+  // SEC4=======================================================================
+  .section4 {
+    // h2
+    h2 {
+      font-size: 4rem;
+      font-weight: 400;
+      opacity: 0.8;
+      text-align: center;
+    }
+
+    // info
+    .sec4-info {
+      grid-template-columns: unset;
+      grid-template-rows: 1fr 1fr 1fr;
+
+      img {
+        width: 70px;
+        height: 70px;
+        margin: 2rem;
+        margin-top: 6rem;
+      }
+
+      p {
+        font-size: 1.8rem;
+        max-width: 35ch;
+      }
+    }
+  }
+
+  // SEC5========================================================
+  .section5 {
+    grid-template-columns: 1fr 1fr;
+    background: rgba(144, 212, 197, 255);
+
+    .sec5 {
+      min-width: 100%;
+      min-height: 300px;
+    }
+
+    .sec5-img1 {
+      background-image: url(../images/mobile/image-gallery-cone.jpg);
+      background-size: contain;
+      background-position: bottom right;
+    }
+
+    .sec5-img2 {
+      background-image: url(../images/mobile/image-gallery-orange.jpg);
+      background-size: contain;
+      background-position: bottom left;
+    }
+
+    .sec5-img3 {
+      background-image: url(../images/mobile/image-gallery-milkbottles.jpg);
+      background-size: contain;
+      background-position: top right;
+    }
+
+    .sec5-img4 {
+      background-image: url(../images/mobile/image-gallery-sugar-cubes.jpg);
+      background-size: contain;
+      background-position: top left;
+    }
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .toggle {
+    .menu {
+      padding: 3rem 8rem;
+    }
+  }
+}
